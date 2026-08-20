@@ -7,6 +7,7 @@ export class LoginPage {
     private readonly passwordInput: Locator;
     private readonly submitButton: Locator;
 
+    //create constructor
     constructor(page: Page) {
         this.page = page;
         this.loginNavButton = page.getByRole('link', { name: 'Sign in' });
@@ -15,6 +16,8 @@ export class LoginPage {
         this.submitButton = page.getByRole('button', { name: 'Sign in' });
     }
 
+
+    //Fuction
     async navigasiKeLogin(): Promise<void> {
         await this.loginNavButton.click();
     }
