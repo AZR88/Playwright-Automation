@@ -25,6 +25,9 @@ export class LoginPage {
     async login(email: string, password: string): Promise<void> {
         await this.emailInput.fill(email);
         await this.passwordInput.fill(password);
-        await this.submitButton.click();
     } 
+
+    async submitLogin(): Promise<void> {
+        await this.submitButton.click();
+    }
 }

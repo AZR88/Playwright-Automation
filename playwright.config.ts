@@ -11,6 +11,7 @@ import { defineConfig, devices } from '@playwright/test';
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
+
 export default defineConfig({
   testDir: './tests',
   /* Run tests in files in parallel */
@@ -66,6 +67,16 @@ export default defineConfig({
     //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     // },
   ],
+
+  timeout: 60 * 1000, 
+
+  expect: {
+    // 2. ASSERTION TIMEOUT
+    // Batas waktu metode `expect()` menunggu elemen UI muncul atau berubah wujud.
+    // Default: 5000ms (5 detik). Ubah menjadi 10 detik jika rendering UI aplikasi sangat berat.
+    timeout: 10000, 
+  },
+
 
   /* Run your local dev server before starting the tests */
   // webServer: {

@@ -1,20 +1,32 @@
 [
-    {
-      "scenario": "Berhasil login dengan akun valid",
-      "email": "Admintest@gmail.com",
-      "password": "admin1234",
-      "isValid": true
-    },
-    {
-      "scenario": "Gagal login karena password salah",
-      "email": "admin@test.com",
-      "password": "SalahPassword999",
-      "isValid": false
-    },
-    {
-      "scenario": "Gagal login karena email tidak terdaftar",
-      "email": "hantu@test.com",
-      "password": "Password123",
-      "isValid": false
-    }
-  ]
+  {
+    "scenario": "Berhasil login dengan akun valid",
+    "email": "Admintest@gmail.com",
+    "password": "admin1234",
+    "validationType": "success"
+  },
+  {
+    "scenario": "Gagal login karena password salah",
+    "email": "admin@test.com",
+    "password": "SalahPassword999",
+    "validationType": "False"
+  },
+  {
+    "scenario": "Gagal login karena email tidak terdaftar",
+    "email": "hantu@test.com",
+    "password": "Password123",
+    "validationType": "False"
+  },
+  {
+    "scenario": "Gagal karena email Kosong",
+    "email": "admin@gmail.com",
+    "password": "",
+    "validationType": "button_disabled"
+  },
+  {
+    "scenario": "Gagal karena password Kosong",
+    "email": "",
+    "password": "Admin1234",
+    "validationType": "button_disabled"
+  }
+]
