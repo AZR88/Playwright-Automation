@@ -1,0 +1,20 @@
+[
+    {
+      "scenario": "Berhasil login dengan akun valid",
+      "email": "Admintest@gmail.com",
+      "password": "admin1234",
+      "isValid": true
+    },
+    {
+      "scenario": "Gagal login karena password salah",
+      "email": "admin@test.com",
+      "password": "SalahPassword999",
+      "isValid": false
+    },
+    {
+      "scenario": "Gagal login karena email tidak terdaftar",
+      "email": "hantu@test.com",
+      "password": "Password123",
+      "isValid": false
+    }
+  ]
