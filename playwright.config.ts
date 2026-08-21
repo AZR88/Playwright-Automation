@@ -31,6 +31,7 @@ export default defineConfig({
   },
 
   projects: [
+    //storage state
     { name: 'setup', testMatch: /.*\.setup\.ts/ },
 
     {
