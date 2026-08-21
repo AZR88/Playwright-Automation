@@ -2,6 +2,9 @@
 import { test, expect } from '../fixtures/test-base';
 import loginData from '../data/users.json'; 
 
+//clear cache
+test.use({ storageState: { cookies: [], origins: [] } });
+
 for (const data of loginData) {
     test(`Scenario: ${data.scenario}`, async ({ page, loginPage }) => {
         await page.goto('/'); 
